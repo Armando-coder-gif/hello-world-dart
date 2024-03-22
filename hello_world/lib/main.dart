@@ -11,9 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false, // quita la etiqueta de debug en la pantalla
-      home: CounterScreen(),
+      theme: ThemeData(
+        useMaterial3: true, // se pueden editar los widgets como aparecen en material3
+        colorSchemeSeed: Colors.blue, // crea una paleta de colores
+      ),
+      home: const CounterScreen(),
 
     );
   }
