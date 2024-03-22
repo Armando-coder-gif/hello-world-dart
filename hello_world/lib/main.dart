@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/presentation/screens/counter/counter_screen.dart';
+import 'package:hello_world/presentation/screens/counter/counter_functions_screen.dart';
+// import 'package:hello_world/presentation/screens/counter/counter_screen.dart';
 
 void main() {
   // widget inicial
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true, // se pueden editar los widgets como aparecen en material3
         colorSchemeSeed: Colors.blue, // crea una paleta de colores
       ),
-      home: const CounterScreen(),
+      home: const CounterFunctionsScreen(),
 
     );
   }
