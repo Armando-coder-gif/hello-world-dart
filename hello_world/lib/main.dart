@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hello_world/presentation/screens/counter/counter_screen.dart';
 
 void main() {
   // widget inicial
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,9 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false, // quita la etiqueta de debug en la pantalla
-      home: Scaffold(
-        body:Center(child: Text("Hola mundo")),
-      ),
+      home: CounterScreen(),
 
     );
   }
