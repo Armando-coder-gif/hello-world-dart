@@ -9,7 +9,6 @@ class CounterScreen extends StatefulWidget {
 
 class _CounterScreenState extends State<CounterScreen> {
   int clickCounter = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +23,9 @@ class _CounterScreenState extends State<CounterScreen> {
             '$clickCounter',
             style: const TextStyle(fontSize: 160, fontWeight: FontWeight.w100),
           ),
-          const Text(
-            'Clicks',
-            style: TextStyle(
+           Text(
+            (clickCounter == 1) ? 'Click':'Clicks',
+            style: const TextStyle(
               fontSize: 25,
             ),
           )
@@ -34,8 +33,9 @@ class _CounterScreenState extends State<CounterScreen> {
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() { //? es como el useState en react
-          // clickCounter += 1; o esta opción
+          setState(() {
+            //? es como el useState en react
+            // clickCounter += 1; o esta opción
             clickCounter++;
           });
         },
